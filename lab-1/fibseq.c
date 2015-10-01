@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-extern int fibonacci(int x);
+extern int fibonacci(int x,int y,int z);
 
 int main(int argc, char **argv)
 {
@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
   scanf("%d",&number);
   start = clock();
-  result = fibonacci(number);   
+  result = fibonacci(number,0,1);   
   finish = clock();
   duration = (double)(finish - start)/CLOCKS_PER_SEC;
   printf("The fibonacci sequence at %d is: %d\n", number, result);
